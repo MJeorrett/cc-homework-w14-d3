@@ -12,14 +12,14 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    XmlHttpHelper.get( "https://api.github.com/users/MJeorrett/repos", ( reposObj ) => {
+    XmlHttpHelper.get( "https://api.sandbox.freeagent.com/v2/company", "1mnnp7BmgRFQcpliSQRR_yQ_2l0_jh02_SlOixFgu", ( reposObj ) => {
       console.log( "reposObj:", reposObj )
     })
   }
 
   render() {
     return (
-      <h1>Matthew's GitHub Reader</h1>
+      <h1>FreeAgent App</h1>
     )
   }
 

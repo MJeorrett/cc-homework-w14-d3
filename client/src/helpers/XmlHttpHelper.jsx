@@ -1,8 +1,9 @@
 const XmlHttpHelper = {
 
-  get( url, onloadCallback ) {
+  get( url, token, onloadCallback ) {
     var req = new XMLHttpRequest()
     req.open( 'get', url )
+    req.setRequestHeader( 'Authorization', `Bearer ${token}` )
     req.onload = () => {
       const dataObject = JSON.parse( req.responseText )
       if( req.status === 200 ) {
