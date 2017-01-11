@@ -8,9 +8,8 @@ class Main extends React.Component {
       <div>
         <h1>FreeAgent for Ebay</h1>
         <nav>
-          <Link to="/ebay">Ebay</Link>
-          <br />
-          <Link to="/free-agent">FreeAgent</Link>
+          <Link className='link' to="/ebay">Ebay</Link>
+          <Link className='link' to="/free-agent">FreeAgent</Link>
         </nav>
         { this.props.children }
       </div>

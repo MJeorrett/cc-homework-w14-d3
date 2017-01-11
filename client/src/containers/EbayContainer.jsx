@@ -20,7 +20,6 @@ class EbayContainer extends React.Component {
 
     return (
       <div>
-        <h1>Ebay Container</h1>
         { ebayItemElements }
       </div>
     )
