@@ -24,7 +24,7 @@ hr {
 
 table {
   border-collapse: collapse;
-  margin: 20px;
+  margin: 40px auto 20px auto;
 }
 
 td, th {
@@ -34,7 +34,8 @@ td, th {
 }
 
 th {
-  font-size: 20px;
+  font-size: 24px;
+  background-color: #EFF;
 }
 
 tbody tr:hover {
@@ -60,8 +61,24 @@ tbody tr:hover {
   align-items: center;
   border: 4px solid dodgerblue;
   border-radius: 10px;
-  margin: 15px;
+  margin: 15px auto;
   padding: 10px;
+  max-width: 400px;
+}
+
+.ebay-item-title {
+  font-size: 18px;
+}
+
+.ebay-item-price {
+  font-size: 28px;
+  margin: 8px;
+}
+
+.ebay-item-divider {
+  border-width: 1px;
+  margin: 10px 5px;
+  margin-bottom: 0px;
 }
 
 .freeagent-button {
@@ -70,8 +87,8 @@ tbody tr:hover {
   background-color: white;
   border: solid white 3px;
   outline: 2px solid dodgerblue;
-  width: 30px;
-  height: 25px;
+  width: 38px;
+  height: 30px;
   padding: 5px;
 }
 
@@ -79,4 +96,9 @@ tbody tr:hover {
   background-color: lightblue;
   border-color: lightblue;
   cursor: pointer;
+}
+
+#loading-message {
+  text-align: center;
+  font-size: 40px;
 }

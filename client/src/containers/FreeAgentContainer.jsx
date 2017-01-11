@@ -52,7 +52,7 @@ class FreeAgentContainer extends React.Component {
         </table>
       )
     } else {
-      return <p>"Loading..."</p>
+      return <p id="loading-message">Loading...</p>
     }
   }
 

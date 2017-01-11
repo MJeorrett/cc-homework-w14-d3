@@ -11,11 +11,12 @@ const EbayItem = function({ item }) {
   return (
     <div className="ebay-item-container">
       <h3 className="ebay-item-title">{ title }</h3>
-      <p>{ `Price: £${price}` }</p>
+      <p className="ebay-item-price">{ `£${price}` }</p>
       <FreeAgentButton
         description={ title }
         price={ price }
       />
+    <hr className="ebay-item-divider"/>
       <br />
       <img src={ imgUrl } />
     </div>

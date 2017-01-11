@@ -18,7 +18,7 @@ class EbayContainer extends React.Component {
     });
 
     return (
-      <div>
+      <div className="content-container">
         { ebayItemElements }
       </div>
     )
