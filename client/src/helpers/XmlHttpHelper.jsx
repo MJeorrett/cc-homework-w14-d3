@@ -1,6 +1,6 @@
 const XmlHttpHelper = {
 
-  get( url, token, onloadCallback ) {
+  getWithAuthorizationToken( url, token, onloadCallback ) {
     var req = new XMLHttpRequest()
     req.open( 'get', url )
     req.setRequestHeader( 'Authorization', `Bearer ${token}` )

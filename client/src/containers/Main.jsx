@@ -12,7 +12,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    XmlHttpHelper.get( "https://api.sandbox.freeagent.com/v2/company", "1mnnp7BmgRFQcpliSQRR_yQ_2l0_jh02_SlOixFgu", ( reposObj ) => {
+    XmlHttpHelper.getWithAuthorizationToken( "https://api.sandbox.freeagent.com/v2/company", "1mnnp7BmgRFQcpliSQRR_yQ_2l0_jh02_SlOixFgu", ( reposObj ) => {
       console.log( "reposObj:", reposObj )
     })
   }
