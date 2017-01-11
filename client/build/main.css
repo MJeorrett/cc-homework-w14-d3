@@ -38,3 +38,20 @@ nav {
   margin: 15px;
   padding: 10px;
 }
+
+.freeagent-button {
+  background-image: url('/freeagent-logo.png');
+  background-size: cover;
+  background-color: white;
+  border: solid white 3px;
+  outline: 2px solid dodgerblue;
+  width: 30px;
+  height: 25px;
+  padding: 5px;
+}
+
+.freeagent-button:hover {
+  background-color: lightblue;
+  border-color: lightblue;
+  cursor: pointer;
+}
