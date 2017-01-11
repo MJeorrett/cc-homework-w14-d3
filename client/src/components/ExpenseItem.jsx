@@ -3,10 +3,10 @@ import React from 'react'
 const ExpenseItem = function({ expenseData: data }) {
   console.log("data:", data);
   return (
-    <div>
-      <h3>{ data.description }</h3>
-      <p>{ `Cost: £${-Number(data.gross_value)}` }</p>
-    </div>
+    <tr>
+      <td><b>{ data.description }</b></td>
+      <td>£{ -Number(data.gross_value) }</td>
+    </tr>
   )
 }
 

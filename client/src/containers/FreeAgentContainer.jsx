@@ -27,12 +27,10 @@ class FreeAgentContainer extends React.Component {
   }
 
   render() {
-
-    var output = <p>"Loading..."</p>
     var expensesData = this.state.data
 
     if ( expensesData.length > 0 ) {
-      output = expensesData.map( ( expenseData, index ) => {
+      var output = expensesData.map( ( expenseData, index ) => {
         return (
           <ExpenseItem
             key={ index }
@@ -40,13 +38,22 @@ class FreeAgentContainer extends React.Component {
           />
         )
       })
+      return (
+        <table>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            { output }
+          </tbody>
+        </table>
+      )
+    } else {
+      return <p>"Loading..."</p>
     }
-
-    return (
-      <div>
-        { output }
-      </div>
-    )
   }
 
 }
