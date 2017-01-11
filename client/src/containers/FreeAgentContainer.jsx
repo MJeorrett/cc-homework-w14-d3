@@ -9,7 +9,7 @@ class FreeAgentContainer extends React.Component {
     super()
     this.state = {
       apiBaseUrl: 'https://api.sandbox.freeagent.com/v2/',
-      token: "1mnnp7BmgRFQcpliSQRR_yQ_2l0_jh02_SlOixFgu",
+      token: "1f7DR4XDIDB6GyDBkgjaxI6WhXs_fCenSBApzybJC",
       data: {}
     }
   }
