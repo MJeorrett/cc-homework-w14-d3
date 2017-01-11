@@ -17,8 +17,14 @@ nav {
   margin: 30px 10px;
 }
 
+hr {
+  margin: 25px 5px;
+  border: 1px solid dodgerblue;
+}
+
 table {
   border-collapse: collapse;
+  margin: 20px;
 }
 
 td, th {
@@ -29,6 +35,11 @@ td, th {
 
 th {
   font-size: 20px;
+}
+
+tbody tr:hover {
+  background-color: lightblue;
+  cursor: cell;
 }
 
 .link {

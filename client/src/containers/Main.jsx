@@ -11,6 +11,7 @@ class Main extends React.Component {
           <Link className='link' to="/ebay">Ebay</Link>
           <Link className='link' to="/free-agent">FreeAgent</Link>
         </nav>
+        <hr />
         { this.props.children }
       </div>
     )
