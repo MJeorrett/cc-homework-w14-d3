@@ -10,7 +10,6 @@ class EbayContainer extends React.Component {
     this.state = {
       items: ebayData.findItemsByKeywordsResponse[0].searchResult[0].item
     }
-    console.log( this.state.items );
   }
 
   render() {
