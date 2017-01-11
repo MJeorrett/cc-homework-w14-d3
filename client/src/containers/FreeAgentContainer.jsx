@@ -1,6 +1,7 @@
 import React from 'react';
 
 import XmlHttpHelper from '../helpers/XmlHttpHelper'
+import ExpenseItem from '../components/ExpenseItem'
 
 class FreeAgentContainer extends React.Component {
 
@@ -17,19 +18,33 @@ class FreeAgentContainer extends React.Component {
     XmlHttpHelper.getWithAuthorizationToken(
       this.state.apiBaseUrl + "expenses",
       this.state.token,
-      ( companyObj ) => {
+      ( expensesObj ) => {
         this.setState({
-          data: companyObj
+          data: expensesObj.expenses
         })
       }
     )
   }
 
   render() {
+
+    var output = <p>"Loading..."</p>
+    var expensesData = this.state.data
+
+    if ( expensesData.length > 0 ) {
+      output = expensesData.map( ( expenseData, index ) => {
+        return (
+          <ExpenseItem
+            key={ index }
+            expenseData={ expenseData }
+          />
+        )
+      })
+    }
+
     return (
       <div>
-        <h1>FreeAgent Container</h1>
-        { JSON.stringify( this.state.data ) }
+        { output }
       </div>
     )
   }
