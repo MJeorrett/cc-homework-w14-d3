@@ -7,20 +7,30 @@ class Main extends React.Component {
   constructor() {
     super()
     this.state = {
-      repos: []
+      repos: [],
+      baseUrl: 'https://api.sandbox.freeagent.com/v2/',
+      token: "1mnnp7BmgRFQcpliSQRR_yQ_2l0_jh02_SlOixFgu"
     }
   }
 
   componentDidMount() {
-    XmlHttpHelper.getWithAuthorizationToken( "https://api.sandbox.freeagent.com/v2/company", "1mnnp7BmgRFQcpliSQRR_yQ_2l0_jh02_SlOixFgu", ( reposObj ) => {
-      console.log( "reposObj:", reposObj )
-    })
+    XmlHttpHelper.getWithAuthorizationToken(
+      this._getUrl( "company" ),
+      this.state.token,
+      ( reposObj ) => {
+        console.log( "reposObj:", reposObj )
+      }
+    )
   }
 
   render() {
     return (
       <h1>FreeAgent App</h1>
     )
+  }
+
+  _getUrl( route ) {
+    return this.state.baseUrl + route
   }
 
 }
