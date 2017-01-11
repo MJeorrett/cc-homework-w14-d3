@@ -18,8 +18,17 @@ const XmlHttpHelper = {
   postWithAuthorizationToken( url, token, payload, onloadCallback ) {
     var req = new XMLHttpRequest()
     req.open( 'POST', url )
+    req.setRequestHeader( 'Content-Type', 'application/json' )
     this._setAuthorizationHeader( req, token )
-    req.send( payload )
+    req.onload = () => {
+      const dataObject = JSON.parse( req.responseText )
+      if( req.status === 201 ) {
+        if ( onloadCallback ) onloadCallback( dataObject )
+      } else {
+        console.log( "Error GET from:", url, ", failed with status: ", req.status, "/n", dataObject );
+      }
+    }
+    req.send( JSON.stringify( payload ) )
   },
 
   _setAuthorizationHeader( req, token ) {
