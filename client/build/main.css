@@ -43,6 +43,19 @@ tbody tr:hover {
   cursor: cell;
 }
 
+#controls-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid dodgerblue;
+}
+
+#controls-container-padding {
+  height: 200px;
+}
+
 .link {
   text-decoration: none;
   border: 2px solid dodgerblue;
