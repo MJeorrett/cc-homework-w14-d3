@@ -14,7 +14,8 @@ const FreeAgentButton = function({ price, description, imageUrl }) {
         category: "https://api.sandbox.freeagent.com/v2/categories/271",
         currency: "GBP",
         dated_on: "2017-02-14",
-        gross_value: (-price).toString()
+        gross_value: (-price).toString(),
+        user: "https://api.sandbox.freeagent.com/v2/users/1560"
       }
     }
     XmlHttpHelper.postWithAuthorizationToken(

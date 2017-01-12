@@ -19,6 +19,7 @@ class FreeAgentContainer extends React.Component {
       this.state.apiBaseUrl + "expenses",
       this.state.token,
       ( expensesObj ) => {
+        console.log("expensesObj:", expensesObj);
         this.setState({
           data: expensesObj.expenses
         })
